@@ -96,3 +96,10 @@
 .nav-right{
   text-align: right;
 }
+
+.search{
+  width: 400px;
+  margin-bottom: 5px;
+  height: 20px;
+  border: 2px solid skyblue;
+}
