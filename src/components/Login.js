@@ -25,15 +25,15 @@ const Login = ()=>{
             }
         });
         result = await result.json();
-        if(result.name){
-            console.log("The user is:", result.name);
+        if(result.auth){
+            localStorage.setItem('user',JSON.stringify(result.user));
+            localStorage.setItem('token',JSON.stringify(result.auth));
+            navigate('/'); 
         }else{
             console.log("Please enter correct credential");
         }
-        localStorage.setItem('user',JSON.stringify(result));
-        if(result){
-            navigate('/');     
-        }
+        
+        
     }
     return (
         <div className='login'>
